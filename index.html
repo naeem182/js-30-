@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Discount</title>
+    <style>
+        .hw h4 {
+            margin-left: 9rem;
+
+        }
+
+        .hw h4 input {
+            width: 50%;
+        }
+
+        .hw h3 {
+            text-align: center;
+        }
+
+        .hw h3 button {
+            padding: 3px 5px;
+            /* background-color: peru; */
+            margin-bottom: 2rem;
+        }
+
+        /* .hw h3 button:hover {
+
+            /* background-color: rgb(197, 188, 178);
+        } */
+
+        */
+    </style>
+</head>
+
+<body>
+    <header class="hw">
+        <h1>30% <span style="color: rgb(255, 0, 76);"> off</span></h1>
+        <h4>price: <input id="inputprice" type="number" placeholder="type your price"></h4>
+        <h4> cupon: <input id="cuponid" type="text" placeholder="Enter your  cupon"></h4>
+        <h3><button id="Applybtn">Apply</button></h3>
+        <h4>please pay: <span id="pay">00</span></h4>
+
+    </header>
+    <script>
+        // document.getElementById('cuponid').addEventListener('keyup', function (event) {
+        //     const cuponid = event.target.value
+        //     const btn = document.getElementById('Applybtn')
+        //     if (cuponid === 'naeem30') {
+        //         btn.removeAttribute('disabled')
+        //     }
+        //     else
+        //         btn.setAttribute('disabled', true)
+
+        // })
+
+
+
+        document.getElementById('Applybtn').addEventListener('click', function () {
+
+            // console.log('click')
+            const priceEle = document.getElementById('inputprice')
+            const price = priceEle.value
+            const cuponid = document.getElementById('cuponid')
+
+            const cupon = cuponid.value
+
+            // console.log(cupon)
+            // console.log(price)
+            const payEle = document.getElementById('pay')
+
+            if (price == '') {
+                alert('you did not type any price ')
+
+
+            }
+
+            else if (cupon === 'naeem30') {
+
+
+                const currentpay = price - price * 30 / 100
+
+                payEle.innerText = currentpay
+            }
+
+            else {
+                alert('you are not eligible for 30%')
+                const currentpay = price
+
+
+                payEle.innerText = currentpay
+                cuponid.value = ''
+            }
+
+
+
+
+
+
+
+        })
+
+    </script>
+</body>
+
+</html>

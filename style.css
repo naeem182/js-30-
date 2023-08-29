@@ -1,0 +1,23 @@
+header h1 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.hw {
+    height: 20rem;
+    width: 40rem;
+
+    align-items: center;
+    /* background-color: rgb(100, 102, 104); */
+    border: 2px solid navy;
+    border-radius: 1rem;
+
+
+    margin: 0 auto;
+    /* margin: auto; */
+    /* transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute; */
+}
